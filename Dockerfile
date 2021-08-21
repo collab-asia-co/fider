@@ -11,7 +11,7 @@ RUN npm -v
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 mage build
 
 # Runtime Step
-FROM alpine:3.10
+FROM alpine:latest
 RUN apk update && apk add ca-certificates
 
 RUN mkdir /app
